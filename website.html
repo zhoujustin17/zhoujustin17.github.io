@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Justin Zhou</title>
+<meta name="description" content="Quantitative research on financial markets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16181d;
+    --paper:#fcfcfa;
+    --rule:#d9dbd6;
+    --muted:#6b6f76;
+    --accent:#1f4e5f;
+    --serif:"Source Serif 4",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.62;
+    font-variant-numeric:oldstyle-nums;
+  }
+  .page{max-width:41rem;margin:0 auto;padding:5rem 1.5rem 7rem}
+
+  /* masthead ------------------------------------------------ */
+  .name{
+    font-size:2.4rem;line-height:1.1;font-weight:600;
+    letter-spacing:-.02em;margin:0 0 .4rem;
+  }
+  .standfirst{
+    font-size:1.06rem;color:var(--muted);margin:0 0 1.6rem;max-width:34rem;
+  }
+  .contact{
+    font-family:var(--mono);font-size:.76rem;letter-spacing:.02em;
+    color:var(--muted);margin:0;
+  }
+  .contact a{color:var(--muted)}
+  .contact span{color:var(--rule);padding:0 .45rem}
+
+  /* section furniture --------------------------------------- */
+  section{margin-top:3.6rem}
+  .eyebrow{
+    font-family:var(--mono);font-size:.7rem;font-weight:500;
+    text-transform:uppercase;letter-spacing:.14em;color:var(--accent);
+    margin:0 0 .9rem;padding-bottom:.5rem;
+    border-bottom:1px solid var(--rule);
+  }
+  p{margin:0 0 1rem}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(31,78,95,.32)}
+  a:hover{border-bottom-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  /* entries -------------------------------------------------- */
+  .entry{
+    padding:1.25rem 0;border-bottom:1px solid var(--rule);
+  }
+  .entry:last-child{border-bottom:none}
+  .entry-head{
+    display:flex;gap:1rem;align-items:baseline;justify-content:space-between;
+    flex-wrap:wrap;margin-bottom:.35rem;
+  }
+  .entry-title{font-size:1.12rem;font-weight:600;margin:0;letter-spacing:-.005em}
+  .entry-meta{
+    font-family:var(--mono);font-size:.72rem;color:var(--muted);
+    white-space:nowrap;letter-spacing:.03em;
+  }
+  .entry p{margin:0 0 .6rem;font-size:.97rem}
+  .entry p:last-child{margin-bottom:0}
+
+  /* the results table --------------------------------------- */
+  table{
+    width:100%;border-collapse:collapse;margin:.9rem 0 .2rem;
+    font-family:var(--mono);font-size:.74rem;
+  }
+  caption{
+    text-align:left;font-family:var(--mono);font-size:.68rem;
+    text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+    padding-bottom:.45rem;
+  }
+  thead th{
+    font-weight:500;text-align:right;color:var(--muted);
+    border-bottom:1px solid var(--ink);padding:.3rem .5rem;
+  }
+  thead th:first-child{text-align:left}
+  tbody td{
+    text-align:right;padding:.3rem .5rem;
+    border-bottom:1px solid var(--rule);
+    font-variant-numeric:tabular-nums;
+  }
+  tbody td:first-child{text-align:left;color:var(--muted)}
+  tbody tr:last-child td{border-bottom:1px solid var(--ink)}
+  .lead-col{color:var(--ink)!important;font-weight:500}
+
+  .note{
+    font-family:var(--mono);font-size:.7rem;color:var(--muted);
+    line-height:1.5;margin:.55rem 0 0;
+  }
+
+  /* writing list -------------------------------------------- */
+  .piece{padding:.85rem 0;border-bottom:1px solid var(--rule)}
+  .piece:last-child{border-bottom:none}
+  .piece-title{font-size:1rem;font-weight:600;margin:0 0 .15rem}
+  .piece-desc{font-size:.93rem;color:var(--muted);margin:0}
+
+  footer{
+    margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:.7rem;color:var(--muted);
+  }
+
+  /* load-in -------------------------------------------------- */
+  .page > *{animation:rise .5s ease-out both}
+  .page > *:nth-child(2){animation-delay:.06s}
+  .page > *:nth-child(3){animation-delay:.12s}
+  .page > *:nth-child(4){animation-delay:.18s}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){
+    .page > *{animation:none}
+    *{transition:none!important}
+  }
+
+  @media (max-width:600px){
+    body{font-size:17px}
+    .page{padding:3rem 1.15rem 4.5rem}
+    .name{font-size:1.9rem}
+    table{font-size:.68rem}
+    thead th,tbody td{padding:.28rem .3rem}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1 class="name">Justin Zhou</h1>
+    <p class="standfirst">
+      I like taking a system apart until I understand the whole thing: financial
+      markets, geopolitics, Rubik's cubes. Currently an undergraduate at the
+      University of Chicago studying computational and applied mathematics and
+      economics, focused on commodities and FX trading. From Houston, with
+      seven years in Singapore in between.
+    </p>
+    <p class="contact">
+      <a href="mailto:zhoujustin@uchicago.edu">email</a><span>/</span><a href="https://github.com/zhoujustin17">github</a><span>/</span><a href="https://www.linkedin.com/in/zhou-justin">linkedin</a>
+    </p>
+  </header>
+
+  <section>
+    <h2 class="eyebrow">Projects</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">
+          <a href="https://github.com/zhoujustin17/filtered-momentum">Filtered Momentum</a>
+        </h3>
+        <span class="entry-meta">Python &middot; written 2025, rebuilt 2026</span>
+      </div>
+            <p>
+        A rebuild of a momentum strategy my team wrote up in 2025, which
+        reported a Sharpe ratio of 1.37. Reconstructing it with point-in-time
+        S&amp;P&nbsp;500 membership, next-day execution, and transaction costs
+        gave 0.55 instead. The gap is survivorship bias, entering at the
+        signal's own close, and parameters chosen with the whole sample visible.
+      </p>
+
+  <section>
+    <h2 class="eyebrow">Writing</h2>
+    <p>
+      I write for <a href="https://alphainacademia.substack.com">Alpha in
+      Academia</a>, a research newsletter with roughly nine thousand
+      subscribers. Some of my pieces:
+    </p>
+
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/carrys-zero">Carry's Zero</a></h3>
+      <p class="piece-desc">Holding the G10 carry trade for twenty years returned zero on a 37% drawdown. The premium works in quiet markets, but implied equity volatility is the only signal that spots the unwind.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/black-scholes-cant-count-to-two">Black-Scholes Can't Count to Two</a></h3>
+      <p class="piece-desc">Why the standard model can't price a crack spread option, and three approaches that can.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/the-correlation-nobody-can-forecast">The Correlation Nobody Can Forecast</a></h3>
+      <p class="piece-desc">Racing five correlation estimators on a three-month crack option. The rolling median wins and still misprices by 17.9% of option value.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/when-is-the-crowd-wrong">When Is the Crowd Wrong?</a></h3>
+      <p class="piece-desc">Fading extreme Managed Money positioning in the CFTC's COT data. Clean in silver, decaying in gold, and it inverts in copper.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/how-bacon-killed-its-own-market">How Bacon Killed Its Own Market</a></h3>
+      <p class="piece-desc">Pork belly futures existed to hedge a seasonal storage bet. Bacon became a year-round product and the contract had nothing left to do.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/can-you-beat-the-market-by-trading">Can You Beat the Market by Trading a Japanese Accounting Habit?</a></h3>
+      <p class="piece-desc">Japanese firms settle bills on days ending in 0 or 5. Their banks execute the resulting dollar demand at one fixed price, at 9:55 Tokyo time.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/renewable-momentum-and-forecast-decoupling">Renewable Momentum and Forecast Decoupling in Power Markets</a></h3>
+      <p class="piece-desc">Trading the day-ahead / real-time spread on momentum filters instead of every hour, using wind forecast crashes and load surprises as signals.</p>
+    </div>
+    <div class="piece">
+      <h3 class="piece-title"><a href="https://alphainacademia.substack.com/p/convergence-and-volatility-in-power">Convergence and Volatility in Power Markets</a></h3>
+      <p class="piece-desc">Why day-ahead prices carry a premium over real-time, and what that means for a systematic position in the spread.</p>
+    </div>
+  </section>
+
+  <footer>
+    Last updated August 2026
+  </footer>
+
+</main>
+</body>
+</html>
